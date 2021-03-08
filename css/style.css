@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* HEAFER */
+
+header { 
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    background: url("../img/background-header.png") no-repeat;
+    width: 1400px;
+    height: 715px;
+
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    color: #533738;
+}
+.menu { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 98.32px;
+    margin-top: 36px;
+
+    width: 1201.28px;
+    height: 25px;
+}
+.menu .brend {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+.menu .logo {
+    width: 25.34px;
+    height: 25px;
+    background: url("../img/logo.png");
+}
+.menu a {
+    display: block;
+    height: 20px;
+    
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration: none;
+    color: #533738;
+}
+.intro {
+    margin-left: 184.08px;
+}
+.intro h2 {
+    margin-top: 91px;
+
+    width: 534.02px;
+    height: 186px;
+
+    font-size: 50px;
+    line-height: 62px;
+}
+.intro p {
+    margin-top: 24px;
+
+    width: 493.57px;
+    height: 90px;
+    
+    font-size: 18px;
+    line-height: 30px;
+}
+.intro button {
+    margin-top: 21px;
+    background-color: #CC8B86;
+    border-width: 0px;
+
+    width: 309.14px;
+    height: 74px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+
+}
+.intro button:hover {
+    background-color: #BC7B76;
+}
