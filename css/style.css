@@ -1,23 +1,22 @@
 body {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
+    background: #EFE6E4;
+    width: 1400px;
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    color: #533738;
 }
 
-/* HEAFER */
+/* ШАПКА */
 
 header { 
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-
     background: url("../img/background-header.png") no-repeat;
-    width: 1400px;
     height: 715px;
-
-    font-family: Montserrat, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    color: #533738;
 }
 .menu { 
     display: flex;
@@ -85,4 +84,70 @@ header {
 }
 .intro button:hover {
     background-color: #BC7B76;
+}
+
+/* О НАС */
+.about {
+    margin-top: 65px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 849px;
+}
+
+.about h2 {
+    margin: 0 auto 40px auto;
+
+    font-size: 40px;
+    line-height: 50px;
+    text-transform: uppercase;
+}
+
+.about article {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.about article img {
+    width: 444.54px;
+    height: 465px;
+}
+.about article div {
+    margin-left: 61.69px;
+    width: 528px;
+}
+.about article p {
+    margin: 0 0 18px 0;
+
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.about .stats {
+    margin-top: 21px;
+    display: flex;
+    justify-content: space-around;
+
+    width: 100%;
+    height: 273px;
+    background: #8D7370;
+    color: #FFFFFF;
+}
+.about .stats div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.about .stats div span:first-child {
+    font-size: 50px;
+    line-height: 62px;
+}
+.about .stats div span:last-child {
+    font-size: 30px;
+    line-height: 37px;
+    font-weight: 500;
+    text-transform: uppercase;
 }
