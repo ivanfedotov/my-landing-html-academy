@@ -15,8 +15,8 @@ header {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    background: url("../img/background-header.png") no-repeat;
-    height: 715px;
+    background: url("../img/background-header.png") repeat-y;
+    min-height: 715px;
 }
 .menu { 
     display: flex;
@@ -53,25 +53,21 @@ header {
     margin-left: 184.08px;
 }
 .intro h2 {
-    margin-top: 91px;
+    margin: 91px auto 0 0;
 
     width: 534.02px;
-    height: 186px;
-
     font-size: 50px;
     line-height: 62px;
 }
 .intro p {
-    margin-top: 24px;
+    margin: 24px auto 0 0;
 
     width: 493.57px;
-    height: 90px;
-    
     font-size: 18px;
     line-height: 30px;
 }
 .intro button {
-    margin-top: 21px;
+    margin: 21px auto 21px 0;
     background-color: #CC8B86;
     border-width: 0px;
 
@@ -80,7 +76,6 @@ header {
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
-
 }
 .intro button:hover {
     background-color: #BC7B76;
@@ -89,12 +84,11 @@ header {
 /* О НАС */
 .about {
     margin-top: 65px;
-
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 849px;
+    min-height: 849px;
 }
 
 .about h2 {
@@ -131,23 +125,35 @@ header {
     justify-content: space-around;
 
     width: 100%;
-    height: 273px;
+    min-height: 273px;
     background: #8D7370;
     color: #FFFFFF;
 }
 .about .stats div {
+    padding: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 .about .stats div span:first-child {
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: 85px;
+
     font-size: 50px;
     line-height: 62px;
 }
 .about .stats div span:last-child {
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: 8px;
+
     font-size: 30px;
     line-height: 37px;
     font-weight: 500;
     text-transform: uppercase;
+}
+
+.porfolio {
+    border: 1px solid #000000;
 }
