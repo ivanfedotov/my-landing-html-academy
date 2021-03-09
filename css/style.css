@@ -9,13 +9,12 @@ body {
     color: #533738;
 }
 
-/* ШАПКА */
-
+/* БЛОК 1 - "ШАПКА" */
 header { 
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    background: url("../img/background-header.png") repeat-y;
+    background: url("../img/header-background.png") repeat-y;
     min-height: 715px;
 }
 .menu { 
@@ -38,7 +37,7 @@ header {
 .menu .logo {
     width: 25.34px;
     height: 25px;
-    background: url("../img/logo.png");
+    background: url("../img/header-logo.png");
 }
 .menu a {
     display: block;
@@ -81,7 +80,7 @@ header {
     background-color: #BC7B76;
 }
 
-/* О НАС */
+/* БЛОК 2 - "О компании" / "О НАС" */
 .about {
     margin-top: 65px;
     display: flex;
@@ -154,6 +153,79 @@ header {
     text-transform: uppercase;
 }
 
+/* БЛОК 3 - "Портфолио" / "Наши работы" */
 .porfolio {
-    border: 1px solid #000000;
+    width: 1200px;
+    min-height: 1099px;
+    margin: 65px auto 0 auto;
 }
+
+.porfolio h2 {
+    margin: 0 auto 0 0;
+
+    font-size: 40px;
+    line-height: 50px;
+    text-transform: uppercase;
+}
+.porfolio .gallery {
+    position: relative;
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.porfolio .gallery div {
+    margin: 0;
+    height: 451px;
+    margin-bottom: 30px;
+}
+
+.porfolio .gallery-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    width: 488px;
+    background: rgba(100, 72, 69, 0.8);
+}
+.porfolio .gallery-hover h3 {
+    width: 270px;
+    margin: 86px auto 0 auto;
+
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.porfolio .gallery-hover p {
+    width: 418px;
+    margin: 15px auto auto auto;
+
+    font-size: 18px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+
+.porfolio .more {
+    margin: 10px auto 65px auto;
+    width: 294px;
+    min-height: 37px;
+}
+.porfolio .more a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 37px;
+}
+
+/* БЛОК 4 "Команда" - "КОМАНДА" */
+.team{
+    border: 3px solid #ff0000;
+}
+
+/* БЛОК 5 - "Как мы работаем" - "КАК МЫ РАБОТАЕМ" */ 
+/* БЛОК 6 - "Отзывы клиентов" - "ОТЗЫВЫ" */ 
+/* БЛОК 7 - "Оставить заявку" - "ОСТАВИТЬ ЗАЯВКУ" */ 
+/* БЛОК 8 - "Подвал" */ 
