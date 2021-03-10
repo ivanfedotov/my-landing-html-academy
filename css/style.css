@@ -11,24 +11,63 @@ body {
 
 /* БЛОК 1 - "ШАПКА" */
 header { 
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    background: url("../img/header-background.png") repeat-y;
+    align-items: flex-start;
+    padding: 0 0 0 184.08px;
+    background: 
+        url("../img/header-background-100.png") 50% 50% no-repeat,
+        url("../img/header-background-10.png") 50% 50% no-repeat;
+    background-size: cover, cover;
     min-height: 715px;
 }
-.menu { 
+header h2 {
+    margin: 152px auto 0 0;
+    width: 534.02px;
+    font-size: 50px;
+    line-height: 62px;
+}
+header p {
+    margin: 24px auto 0 0;
+    width: 493.57px;
+    font-size: 18px;
+    line-height: 30px;
+}
+header button {
+    margin: 21px auto 21px 0;
+    background-color: #CC8B86;
+    border-width: 0px;
+    outline-width: 0px;
+    width: 309.14px;
+    height: 74px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+}
+header button:hover {
+    background-color: #BC7B76;
+    border: 1px solid #533738;
+}
+
+/* БЛОК 0 - "МЕНЮ" */
+nav { 
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 36px;
+    left: 0;
+    width: 100%;
+}
+.menu {
+    position: relative;
+    width: 1201.28px;
+    height: 25px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    margin-left: 98.32px;
-    margin-top: 36px;
-
-    width: 1201.28px;
-    height: 25px;
 }
-.menu .brend {
+.menu .brand {
     display: flex;
     align-items: center;
     margin: 0;
@@ -39,45 +78,26 @@ header {
     height: 25px;
     background: url("../img/header-logo.png");
 }
-.menu a {
-    display: block;
+.menu ul {
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 20px;
-    
+}
+.menu a {
     font-size: 16px;
     line-height: 20px;
     text-decoration: none;
     color: #533738;
 }
-.intro {
-    margin-left: 184.08px;
+.menu ul li {
+    margin-left: 26px;
 }
-.intro h2 {
-    margin: 91px auto 0 0;
-
-    width: 534.02px;
-    font-size: 50px;
-    line-height: 62px;
-}
-.intro p {
-    margin: 24px auto 0 0;
-
-    width: 493.57px;
-    font-size: 18px;
-    line-height: 30px;
-}
-.intro button {
-    margin: 21px auto 21px 0;
-    background-color: #CC8B86;
-    border-width: 0px;
-
-    width: 309.14px;
-    height: 74px;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-}
-.intro button:hover {
-    background-color: #BC7B76;
+.menu ul li a {
+    display: block;
+    height: 20px;
 }
 
 /* БЛОК 2 - "О компании" / "О НАС" */
