@@ -2,7 +2,10 @@ body {
     margin: 0 auto;
     padding: 0;
     background: #EFE6E4;
+    min-width: 1400px;
     width: 1400px;
+
+    /* Вставить ссылкой на гугл фонтс */
     font-family: Montserrat, sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -133,28 +136,26 @@ nav {
 }
 .about article p {
     margin: 0 0 18px 0;
-
     font-size: 18px;
     line-height: 30px;
 }
 
-.about .stats {
+.stats {
     margin-top: 21px;
     display: flex;
     justify-content: space-around;
-
     width: 100%;
     min-height: 273px;
     background: #8D7370;
     color: #FFFFFF;
 }
-.about .stats div {
+.stats div {
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.about .stats div span:first-child {
+.stats div span:first-child {
     flex-wrap: wrap;
     text-align: center;
     margin-top: 85px;
@@ -162,7 +163,7 @@ nav {
     font-size: 50px;
     line-height: 62px;
 }
-.about .stats div span:last-child {
+.stats div span:last-child {
     flex-wrap: wrap;
     text-align: center;
     margin-top: 8px;
@@ -179,50 +180,47 @@ nav {
     min-height: 1099px;
     margin: 65px auto 0 auto;
 }
-
 .porfolio h2 {
     margin: 0 auto 0 0;
-
     font-size: 40px;
     line-height: 50px;
     text-transform: uppercase;
 }
-.porfolio .gallery {
-    position: relative;
+
+.gallery {
     margin-top: 40px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
-.porfolio .gallery div {
+.gallery-card {
+    position: relative;
     margin: 0;
     height: 451px;
     margin-bottom: 30px;
 }
-
-.porfolio .gallery-hover {
+.gallery-card div {
+    background-color: rgba(100, 72, 69, 0.8);;
     position: absolute;
     top: 0;
     left: 0;
-    
-    width: 488px;
-    background: rgba(100, 72, 69, 0.8);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
 }
-.porfolio .gallery-hover h3 {
-    width: 270px;
-    margin: 86px auto 0 auto;
-
+.gallery-card div:hover {
+    opacity: 1;
+}
+.gallery-card div h3 {
+    margin: 86px 22.34% 0  22.34%;
     font-weight: 500;
     font-size: 30px;
     line-height: 37px;
     text-align: center;
     color: #FFFFFF;
 }
-.porfolio .gallery-hover p {
-    width: 418px;
-    margin: 15px auto auto auto;
-
+.gallery-card div p {
+    margin: 15px 7.17% auto 7.17%;
     font-size: 18px;
     line-height: 30px;
     color: #FFFFFF;
