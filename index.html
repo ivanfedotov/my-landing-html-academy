@@ -3,35 +3,36 @@
     <head>
         <link rel="stylesheet" href="css/style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&amp;display=swap" rel="stylesheet">
         <title>Марафон 3.0 ("Заверстаю")</title>
     </head>
     <body>
         <header>
             <h2>Поможем сделать вашу квартиру уютнее</h2>
             <p>Подбираем текстиль, мебель и аксессуары<br>под ваш интерьер, находим магазины<br>и помогаем организовать доставку</p>
-            <button>Оставить заявку</button>
+            <!-- TO DO: можно переделать на ссылку -->
+            <form action="#request" method="GET"><button>Оставить заявку</button></a>
         </header>
         <nav>
             <div class="menu">
                 <div class="brand">
-                    <a href="#" class="logo"></a>
-                    <a href="#">SCANDI</a>
+                    <a href="/" class="logo"></a>
+                    <a href="/">SCANDI</a>
                 </div>
                 <ul>
-                    <li><a href="#">О компании</a></li>
-                    <li><a href="#">Портфолио</a></li>
-                    <li><a href="#">Команда</a></li>
-                    <li><a href="#">Как мы работаем</a></li>
-                    <li><a href="#">Отзывы клиентов</a></li>
-                    <li><a href="#">Оставить заявку</a></li>
-                    <li><a href="#">+7 (981) 857-46-24</a></li>
+                    <li><a href="/#about">О компании</a></li>
+                    <li><a href="/#porfolio">Портфолио</a></li>
+                    <li><a href="/#team">Команда</a></li>
+                    <li><a href="/#working">Как мы работаем</a></li>
+                    <li><a href="/#feedback">Отзывы клиентов</a></li>
+                    <li><a href="/#request">Оставить заявку</a></li>
+                    <li><a href="tel:+79818574624">+7 (981) 857-46-24</a></li>
                 </ul>
             </div>
         </nav>
         <main>
+            <a name="about"></a>
             <section class="about">
-                <!--a name="about"></a-->
                 <h2>О нас</h2>
                 <article>
                     <img src="img/about-pic.png">
@@ -53,6 +54,7 @@
                     </div>
                 </div>
             </section>
+            <a name="porfolio"></a>
             <section class="porfolio">
                 <h2>Наши работы</h2>
                 <div class="gallery">
@@ -92,13 +94,47 @@
                 <div class="more">
                     <a href="#">Смотреть еще</a>
                     <img src="img/portfolio-arrow.png">
-                </div>>
+                </div>
             </section>
+            <a name="team"></a>
             <section class="team">
                 <h2>Команда</h2>
+                <div class="persons">
+                    <!-- TO DO: исправить прижимание  вправо для последних карточек с номерами 2, 5, 8...   -->
+                    <div>
+                        <img src="img/person1.png">
+                        <p>Это Маша, наш главный дизайнер. Она отвечает за дизайн-проект, приезжает к вам домой, общается и помогает сделать вашу квартиру красивой и уютной.</p>
+                    </div>
+                    <div>
+                        <img src="img/person2.png">
+                        <p>С нашим менеджером Сашей вы познакомитесь в первую очередь. Она проконсультирует вас, соберёт все документы и ответит на все вопросы.</p>
+                    </div>
+                    <div>
+                        <img src="img/person3.png">
+                        <p>Катя тоже занимается дизайном. Она всегда находит общий язык с клиентами и точно знает, как обсутроить дом так, чтобы вам понравилось.</p>
+                    </div>
+                </div>
             </section>
-            <section>Отзывы</section>
-            <section>Оставить заявку</section>
+            <a name="working"></a>
+            <section class="working">
+                <h2>Как мы работаем</h2>
+                <div class="steps">
+                    <ol>
+                        <li><p>Знакомимся, выезжаем на объект, утверждаем концепцию, подписывем договор.</p></li>
+                        <li><p>Подбираем мебель, текстиль, аксессуры. Делаем 3D-зуализацию.</p></li>
+                        <li><p>Находим нужные магазины, помогаем с доставкой и оплатой товаров.</p></li>
+                        <li><p>Воплощаем проект в жизнь: расставляем мебель и цветы, вешаем шторы, находим места для мелочей</p></li>
+                    </ol>
+                </div>
+            </section>
+            <a name="feedback"></a>
+            <section>
+                Отзывы
+            </section>
+            <a name="request"></a>
+            <section>
+                Оставить заявку
+            </section>
         </main>
         <footer>footer</footer>
     </body>
