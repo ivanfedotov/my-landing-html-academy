@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="css/style.css">
+        <!-- TO DO: переделать на локальное хранение шрифта -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat&amp;display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&amp;display=swap">
+        <link rel="stylesheet" href="css/style.css">
         <title>Марафон 3.0 ("Заверстаю")</title>
     </head>
     <body>
@@ -11,7 +12,7 @@
             <h2>Поможем сделать вашу квартиру уютнее</h2>
             <p>Подбираем текстиль, мебель и аксессуары<br>под ваш интерьер, находим магазины<br>и помогаем организовать доставку</p>
             <!-- TO DO: можно переделать на ссылку -->
-            <form action="#request" method="GET"><button>Оставить заявку</button></a>
+            <form action="#request" method="GET"><button>Оставить заявку</button></form>
         </header>
         <nav>
             <div class="menu">
@@ -20,12 +21,13 @@
                     <a href="/">SCANDI</a>
                 </div>
                 <ul>
-                    <li><a href="/#about">О компании</a></li>
-                    <li><a href="/#porfolio">Портфолио</a></li>
-                    <li><a href="/#team">Команда</a></li>
-                    <li><a href="/#working">Как мы работаем</a></li>
-                    <li><a href="/#feedback">Отзывы клиентов</a></li>
-                    <li><a href="/#request">Оставить заявку</a></li>
+                    <!-- TO DO: добавить hover для ссылок -->
+                    <li><a href="#about">О компании</a></li>
+                    <li><a href="#porfolio">Портфолио</a></li>
+                    <li><a href="#team">Команда</a></li>
+                    <li><a href="#working">Как мы работаем</a></li>
+                    <li><a href="#feedback">Отзывы клиентов</a></li>
+                    <li><a href="#request">Оставить заявку</a></li>
                     <li><a href="tel:+79818574624">+7 (981) 857-46-24</a></li>
                 </ul>
             </div>
@@ -43,6 +45,7 @@
                     </div>
                 </article>
                 <div class="stats">
+                    <!-- TO DO: сделать hover-эффект? -->
                     <div>
                         <span>5</span><span>лет опыта</span>
                     </div>
@@ -92,6 +95,7 @@
                     </div>
                 </div>
                 <div class="more">
+                    <!-- TO DO: добавить данных и сделать ссылку рабочей -->
                     <a href="#">Смотреть еще</a>
                     <img src="img/portfolio-arrow.png">
                 </div>
@@ -102,15 +106,15 @@
                 <div class="persons">
                     <!-- TO DO: исправить прижимание  вправо для последних карточек с номерами 2, 5, 8...   -->
                     <div>
-                        <img src="img/person1.png">
+                        <img src="img/team-person-1.png">
                         <p>Это Маша, наш главный дизайнер. Она отвечает за дизайн-проект, приезжает к вам домой, общается и помогает сделать вашу квартиру красивой и уютной.</p>
                     </div>
                     <div>
-                        <img src="img/person2.png">
+                        <img src="img/team-person-2.png">
                         <p>С нашим менеджером Сашей вы познакомитесь в первую очередь. Она проконсультирует вас, соберёт все документы и ответит на все вопросы.</p>
                     </div>
                     <div>
-                        <img src="img/person3.png">
+                        <img src="img/team-person-3.png">
                         <p>Катя тоже занимается дизайном. Она всегда находит общий язык с клиентами и точно знает, как обсутроить дом так, чтобы вам понравилось.</p>
                     </div>
                 </div>
@@ -119,6 +123,7 @@
             <section class="working">
                 <h2>Как мы работаем</h2>
                 <div class="steps">
+                    <!-- TO DO: сделать hover-эффект у кружочков -->
                     <ol>
                         <li><p>Знакомимся, выезжаем на объект, утверждаем концепцию, подписывем договор.</p></li>
                         <li><p>Подбираем мебель, текстиль, аксессуры. Делаем 3D-зуализацию.</p></li>
@@ -128,14 +133,46 @@
                 </div>
             </section>
             <a name="feedback"></a>
-            <section>
-                Отзывы
+            <section class="feedback">
+                <h2>Отзывы</h2>
+                <div class="comment">
+                    <!-- TO DO: сделать красивый отыгрыш для hover-эффекта у стрелки -->
+                    <div><a href="#feedback"><img src="img/feedback-arrow.png"></a></div>
+                    <div class="comment-text">
+                       <p>«Восторг! Спасибо, за комфортную жизнь. Очень рада, что выбрала вашу студию для украшения своего дома.</p>
+                       <p>Работа шла быстро, было очень приятно общаться и взаимодествовайть с сотрудниками. Не ожидала, что это будет так легко!</p>
+                       <p>Буду советовать и своим друзьям к вам обращаться!»</p>
+                        <p>АННА БЕЛОВСКАЯ</p>
+                    </div>
+                    <div class="comment-img">
+                        <img src="img/feedback-img-1.png">
+                        <img src="img/feedback-img-2.png">
+                    </div>
+                  <div><a href="#feedback"><img src="img/feedback-arrow.png"></a></div>
+                </div>
             </section>
             <a name="request"></a>
-            <section>
-                Оставить заявку
+            <section class="request">
+                <div class="">
+                    <h2>Оставить заявку</h2>
+                    <p>Оставьте свои контакты. Менеджер перезвонит в удобное вам время и ответит на все вопросы.</p>
+                    <form class="request-form" action="#" method="GET">
+                        <!-- TO DO: добавить маски ввода -->
+                        <input type="text" name="user_name" placeholder="Ваше имя" value="" required>
+                        <input type="text" name="user_phone" placeholder="Введите телефон" value="" required>
+                        <button>Оставить заявку</button>
+                    </form>
+                </div>
+                <div>
+                    <!-- TO DO: вставить интерактивную карту -->
+                    <img src="img/request-map-(prototype).png">
+                </div>
             </section>
         </main>
-        <footer>footer</footer>
+        <footer>
+            <p><a href="tel:+79818574624">+7 (981) 857-46-24</a></p>
+            <p>г. Санкт-петербург, ул. Большая Конюшенная, 19</p>
+            <p>ИП Королёва А.А.</p>
+        </footer>
     </body>
 </html>

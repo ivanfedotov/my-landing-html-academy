@@ -11,14 +11,18 @@ body {
     font-weight: normal;
     color: #533738;
 }
+div, p, h2, ul, ol, li {
+  margin: 0;
+  padding: 0;
+}
 
 /* БЛОК 1 - "ШАПКА" */
-header { 
+header {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 0 0 0 184.08px;
-    background: 
+    background:
         url("../img/header-background-100.png") 50% 50% no-repeat,
         url("../img/header-background-10.png") 50% 50% no-repeat;
     background-size: cover, cover;
@@ -53,7 +57,7 @@ header button:hover {
 }
 
 /* БЛОК 0 - "МЕНЮ" */
-nav { 
+nav {
     position: absolute;
     margin: 0;
     padding: 0;
@@ -82,7 +86,6 @@ nav {
     background: url("../img/header-logo.png");
 }
 .menu ul {
-    margin: 0;
     list-style-type: none;
     display: flex;
     justify-content: space-between;
@@ -137,7 +140,7 @@ nav {
     width: 528px;
 }
 .about article p {
-    margin: 0 0 18px 0;
+    margin-bottom: 18px;
     font-size: 18px;
     line-height: 30px;
 }
@@ -151,7 +154,6 @@ nav {
     color: #FFFFFF;
 }
 .stats div {
-    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -181,7 +183,7 @@ nav {
     padding: 65px 100px 65px 100px;
 }
 .porfolio h2 {
-    margin: 0 auto 0 0;
+    margin-right: auto;
     font-size: 40px;
     line-height: 50px;
     text-transform: uppercase;
@@ -285,7 +287,6 @@ nav {
 }
 .steps ol {
     margin: 0 auto 0 auto;
-    padding: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -293,8 +294,7 @@ nav {
     counter-reset: num;
 }
 .steps ol li {
-    margin: 0;
-    padding: 130px 0 0 0;
+    padding-top: 130px;
     font-size: 18px;
     line-height: 30px;
     text-align: left;
@@ -312,14 +312,12 @@ nav {
     margin-left: 107px;
 }
 .steps ol li p {
-    margin: 0;
-    padding: 0;
     text-align: center;
 }
 .steps ol li p::before {
     content: counter(num);
     counter-increment: num;
-    
+
     display: block;
     width: 285px;
     position: absolute;
@@ -331,7 +329,130 @@ nav {
     color: #FFFFFF;
 }
 
-/* БЛОК 6 - "Как мы работаем" - "КАК МЫ РАБОТАЕМ" */ 
-/* БЛОК 7 - "Отзывы клиентов" - "ОТЗЫВЫ" */ 
-/* БЛОК 8 - "Оставить заявку" - "ОСТАВИТЬ ЗАЯВКУ" */ 
-/* БЛОК 9 - "Подвал" */ 
+/* БЛОК 6 - "Отзывы клиентов" - "ОТЗЫВЫ" */
+.feedback {
+    padding: 65px 182px;
+    background-color: #efe6e4;
+}
+.feedback h2 {
+    text-align:center;
+    font-size: 40px;
+    line-height: 50px;
+    text-transform: uppercase;
+    color: #533738;
+}
+.comment {
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.comment div:first-child {
+    padding-left: 29px;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+.comment div:last-child {
+    padding-left: 29px;
+}
+.comment-text p {
+    padding: 0 20px 30px 0;
+    font-size: 18px;
+    line-height: 30px;
+    color: #533738;
+}
+.comment-text p:last-child {
+    text-transform: uppercase;
+}
+.comment-img {
+      width: 407px;
+}
+.comment-img img:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+/* БЛОК 7 - "Оставить заявку" - "ОСТАВИТЬ ЗАЯВКУ" */
+.request {
+    background: #8D7370;
+    padding: 0 101px 0 181px;
+    display: flex;
+}
+.request h2 {
+    font-size: 40px;
+    line-height: 50px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.request p {
+    margin: 24px 0 9px 0;
+    font-size: 18px;
+    line-height: 30px;
+    color: #FFFFFF;
+    opacity: 0.6;
+}
+.request div:first-child {
+    padding-top: 50px;
+    padding-right: 20px;
+}
+.request [type="text"] {
+    background: #8D7370;
+    margin-top: 35px;
+    width: 100%;
+    height: 30px;
+    font-size: 18px;
+    line-height: 30px;
+    color: #F6EDE9;
+    border-width: 0;
+    border-bottom: 1px solid #F6EDE9;
+    outline-width: 0px;
+}
+
+/* Покраска placeholder - готовый рецепт с https://html5.by/blog/placeholder/  */
+.request [type="text"]::-webkit-input-placeholder {color:#F6EDE9;}
+.request [type="text"]::-moz-placeholder          {color:#F6EDE9;}/* Firefox 19+ */
+.request [type="text"]:-moz-placeholder           {color:#F6EDE9;}/* Firefox 18- */
+.request [type="text"]:-ms-input-placeholder      {color:#F6EDE9;}
+
+
+/* TO DO: объединить стиль кнопки в header и request */
+.request button {
+    margin: 31px auto 21px 0;
+    background-color: #CC8B86;
+    border-width: 0px;
+    outline-width: 0px;
+    width: 309.14px;
+    height: 74px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #533738;
+}
+header button:hover {
+    background-color: #BC7B76;
+    border: 1px solid #533738;
+}
+
+/* БЛОК 9 - "Подвал" */
+footer {
+    background-color: #EFE6E4;
+    padding: 37px 100px 37px 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+footer p {
+    font-size: 18px;
+    line-height: 30px;
+    color: #533738;
+}
+footer p:nth-child(1) {
+    margin-right: 42px;
+}
+footer p:nth-child(2) {
+    margin-right: auto;
+}
+footer a {
+    font-size: 18px;
+    line-height: 30px;
+    color: #533738;
+    text-decoration: none;
+}
