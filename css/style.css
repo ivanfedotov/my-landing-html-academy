@@ -1,3 +1,4 @@
+/* Общие стили */
 body {
     margin: 0 auto;
     padding: 0;
@@ -11,9 +12,49 @@ body {
     font-weight: normal;
     color: #533738;
 }
-div, p, h2, ul, ol, li {
+nav, div, p, h2, ul, ol, li {
   margin: 0;
   padding: 0;
+}
+
+/* БЛОК 0 - "МЕНЮ" */
+.menu {
+    width: 1201.28px;
+    height: 25px;
+    position: absolute;
+    top: 36px;
+    left: 50%;
+    margin-left: -600.64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.brand {
+    display: flex;
+    align-items: center;
+}
+.brand a:first-child {
+    width: 25.34px;
+    height: 25px;
+    background: url("../img/header-logo.png");
+}
+.menu a {
+    display: block;
+    height: 20px;
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration: none;
+    color: #533738;
+}
+.menu ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20px;
+}
+.menu ul li {
+    margin-left: 26px;
 }
 
 /* БЛОК 1 - "ШАПКА" */
@@ -21,7 +62,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0 0 0 184.08px;
+    padding-left: 184.08px;
     background:
         url("../img/header-background-100.png") 50% 50% no-repeat,
         url("../img/header-background-10.png") 50% 50% no-repeat;
@@ -56,56 +97,6 @@ header button:hover {
     border: 1px solid #533738;
 }
 
-/* БЛОК 0 - "МЕНЮ" */
-nav {
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    top: 36px;
-    left: 0;
-    width: 100%;
-}
-.menu {
-    position: relative;
-    width: 1201.28px;
-    height: 25px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.menu .brand {
-    display: flex;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-}
-.menu .logo {
-    width: 25.34px;
-    height: 25px;
-    background: url("../img/header-logo.png");
-}
-.menu ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 20px;
-}
-.menu a {
-    font-size: 16px;
-    line-height: 20px;
-    text-decoration: none;
-    color: #533738;
-}
-.menu ul li {
-    margin-left: 26px;
-}
-.menu ul li a {
-    display: block;
-    height: 20px;
-}
-
 /* БЛОК 2 - "О компании" / "О НАС" */
 .about {
     background-color: #EFE6E4;
@@ -123,7 +114,6 @@ nav {
     text-transform: uppercase;
     text-align: center;
 }
-
 .about article {
     padding-top: 40px;
     padding-bottom: 21px;
@@ -197,7 +187,6 @@ nav {
 }
 .gallery-card {
     position: relative;
-    margin: 0;
     height: 451px;
     margin-bottom: 30px;
 }
@@ -266,6 +255,10 @@ nav {
 .persons div {
     width: 320px;
 }
+.persons div:nth-child(3n-1) {
+    margin-left: 39px;
+    margin-right: auto;
+}
 .persons p {
     font-size: 18px;
     line-height: 30px;
@@ -289,7 +282,7 @@ nav {
     margin: 0 auto 0 auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     list-style-type: none;
     counter-reset: num;
 }
@@ -300,6 +293,9 @@ nav {
     text-align: left;
     color: #533738;
     width: 285px;
+}
+.steps ol li:not(:nth-child(4n)) {
+    margin-right: 20px;
 }
 .steps ol li::before {
     content: '';
@@ -315,6 +311,8 @@ nav {
     text-align: center;
 }
 .steps ol li p::before {
+    
+    /* Счетчик с инкрементом */
     content: counter(num);
     counter-increment: num;
 
@@ -426,7 +424,7 @@ nav {
     line-height: 24px;
     color: #533738;
 }
-header button:hover {
+.request button:hover {
     background-color: #BC7B76;
     border: 1px solid #533738;
 }
