@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- TO DO: переделать на локальное хранение шрифта -->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&amp;display=swap">
         <link rel="stylesheet" href="css/style.css">
         <title>Марафон 3.0 ("Заверстаю")</title>
     </head>
@@ -16,21 +13,23 @@
             <!-- TO DO: можно переделать на ссылку -->
             <form action="#request" method="GET"><button>Оставить заявку</button></form>
         </header>
-        <nav class="menu">
-            <div class="brand">
-                <a href="/"></a>
-                <a href="/">SCANDI</a>
+        <nav>
+            <div class="menu">
+                <div class="brand">
+                    <a href="/" class="logo"></a>
+                    <a href="/">SCANDI</a>
+                </div>
+                <ul>
+                    <!-- TO DO: добавить hover для ссылок -->
+                    <li><a href="#about">О компании</a></li>
+                    <li><a href="#porfolio">Портфолио</a></li>
+                    <li><a href="#team">Команда</a></li>
+                    <li><a href="#working">Как мы работаем</a></li>
+                    <li><a href="#feedback">Отзывы клиентов</a></li>
+                    <li><a href="#request">Оставить заявку</a></li>
+                    <li><a href="tel:+79818574624">+7 (981) 857-46-24</a></li>
+                </ul>
             </div>
-            <ul>
-                <!-- TO DO: добавить hover для ссылок -->
-                <li><a href="#about">О компании</a></li>
-                <li><a href="#porfolio">Портфолио</a></li>
-                <li><a href="#team">Команда</a></li>
-                <li><a href="#working">Как мы работаем</a></li>
-                <li><a href="#feedback">Отзывы клиентов</a></li>
-                <li><a href="#request">Оставить заявку</a></li>
-                <li><a href="tel:+79818574624">+7 (981) 857-46-24</a></li>
-            </ul>
         </nav>
         <main>
             <a name="about"></a>
@@ -82,7 +81,7 @@
                         <img src="img/portfolio-3.png">
                         <div class="gallery-card-hover">
                             <h3>Уютное зонирование<br>6 кв.м.</h3>
-                            <p>В любой части комнаты можно устроить уголок для отдыха, 
+                            <p>В любой части комнаты можно устроить уголок для отдыха,
                                 главное правильно использовать технику зонирования</p>
                         </div>
                     </div>
@@ -108,17 +107,17 @@
                     <!-- TO DO: исправить прижимание  вправо для последних карточек с номерами 2, 5, 8...   -->
                     <div>
                         <img src="img/team-person-1.png">
-                        <p>Это Маша, наш главный дизайнер. Она отвечает за дизайн-проект, 
+                        <p>Это Маша, наш главный дизайнер. Она отвечает за дизайн-проект,
                             приезжает к вам домой, общается и помогает сделать вашу квартиру красивой и уютной.</p>
                     </div>
                     <div>
                         <img src="img/team-person-2.png">
-                        <p>С нашим менеджером Сашей вы познакомитесь в первую очередь. 
+                        <p>С нашим менеджером Сашей вы познакомитесь в первую очередь.
                             Она проконсультирует вас, соберёт все документы и ответит на все вопросы.</p>
                     </div>
                     <div>
                         <img src="img/team-person-3.png">
-                        <p>Катя тоже занимается дизайном. Она всегда находит общий язык с клиентами и 
+                        <p>Катя тоже занимается дизайном. Она всегда находит общий язык с клиентами и
                             точно знает, как обсутроить дом так, чтобы вам понравилось.</p>
                     </div>
                 </div>
@@ -157,19 +156,20 @@
             </section>
             <a name="request"></a>
             <section class="request">
-                <div class="">
+                <div>
                     <h2>Оставить заявку</h2>
                     <p>Оставьте свои контакты. Менеджер перезвонит в удобное вам время и ответит на все вопросы.</p>
                     <form class="request-form" action="#" method="GET">
-                        <!-- TO DO: добавить маски ввода -->
-                        <input type="text" name="user_name" placeholder="Ваше имя" value="" required>
-                        <input type="text" name="user_phone" placeholder="Введите телефон" value="" required>
-                        <button>Оставить заявку</button>
+                        <input type="text" name="user_name" placeholder="Ваше имя" value="" pattern=".{2,}" required>
+                        <input type="tel" name="user_phone" placeholder="Введите телефон" value="" pattern="[0-9]{5,15}" required>
+                        <input type="submit" value="Оставить заявку">
                     </form>
                 </div>
                 <div>
-                    <!-- TO DO: вставить интерактивную карту -->
-                    <img src="img/request-map-(prototype).png">
+                  <iframe class="google-map"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d999.3044966918504!2d30.3226591!3d59.9386301!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1615808584527!5m2!1sru!2sru"
+                    width="590" height="624" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
                 </div>
             </section>
         </main>
