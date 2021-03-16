@@ -229,7 +229,6 @@ header button:hover {
 }
 .gallery-card div:hover {
     opacity: 1;
-    visibility: hidden;
 }
 .gallery-card div h3 {
     margin: 86px 22.34% 0  22.34%;
