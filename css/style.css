@@ -1,17 +1,17 @@
 /* Общие стили */
 @font-face {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local("Montserrat"), url("../fonts/Montserrat/Montserrat-Regular.ttf") format("ttf");
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local("Montserrat"), url("../fonts/Montserrat/Montserrat-Regular.ttf") format("ttf");
 }
 @font-face {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: local("Montserrat"), url("../fonts/Montserrat/Montserrat-Medium.ttf") format("ttf");
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: local("Montserrat"), url("../fonts/Montserrat/Montserrat-Medium.ttf") format("ttf");
 }
 body {
     margin: 0 auto;
@@ -62,6 +62,9 @@ nav {
     align-items: center;
     height: 20px;
 }
+.menu ul li {
+    margin-left: 26px;
+}
 .menu a {
     display: block;
     font-weight: 400;
@@ -71,8 +74,8 @@ nav {
     color: #533738;
     height: 20px;
 }
-.menu ul li {
-    margin-left: 26px;
+.menu ul a:hover {
+    color: #CC8B86;
 }
 
 /* БЛОК 1 - "ШАПКА" */
@@ -120,17 +123,11 @@ header button:hover {
 /* БЛОК 2 - "О компании" / "О НАС" */
 .about {
     background-color: #EFE6E4;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    padding-top: 65px;
+    min-width: 1036px;
     min-height: 849px;
 }
-.about article {
-    padding: 65px 182px 21px 182px;
-    min-width: 1036px;
-}
-.about article h2 {
+.about h2 {
     margin: 0 auto;
     padding-bottom: 40px;
     font-weight: 400;
@@ -139,14 +136,17 @@ header button:hover {
     text-transform: uppercase;
     text-align: center;
 }
-.about article .info {
+.about .info {
+    padding: 0 182px 21px 182px;
     display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
-.about article img {
+.about img {
     width: 444.54px;
     height: 465px;
 }
-.about article p {
+.about p {
     padding: 0 0 18px 63.46px;
     width: 528px;
     font-weight: 400;
@@ -166,6 +166,11 @@ header button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 40px;
+}
+.stats div:hover {
+    background-color: #EFE6E4;
+    color: #533738;
 }
 .stats div span:first-child {
     flex-wrap: wrap;
@@ -213,17 +218,18 @@ header button:hover {
     margin-bottom: 30px;
 }
 .gallery-card div {
-    background-color: rgba(100, 72, 69, 0.8);;
+    background-color: rgba(100, 72, 69, 0.8);
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    /* Чтобы текст не выделялся при Ctrl + A стоит добавить свойство visibility */
+    /* TODO: использовать свойство visibility чтобы текст не выделялся при Ctrl + A */
     opacity: 0;
 }
 .gallery-card div:hover {
     opacity: 1;
+    visibility: hidden;
 }
 .gallery-card div h3 {
     margin: 86px 22.34% 0  22.34%;
@@ -242,16 +248,26 @@ header button:hover {
 }
 
 .porfolio .more {
-    margin: 10px auto 0 auto;
-    width: 294px;
+    margin-top: 10px;
     min-height: 37px;
 }
-.porfolio .more a {
-    text-decoration: none;
+.porfolio .more button {
+    display: block;
+    margin: 0 auto;
+    width: 294px;
+    text-align: left;
+    border-width: 0;
+    outline-width: 0px;
+    background: url("../img/portfolio-arrow.png") center right no-repeat;
     font-weight: 500;
     font-size: 30px;
     line-height: 37px;
     color: #533738;
+}
+.porfolio .more button:hover {
+    border-width: 0;
+    color: #CC8B86;
+    background: url("../img/portfolio-arrow-hover.png") center right no-repeat;
 }
 
 /* БЛОК 4 "Команда" - "КОМАНДА" */
@@ -271,13 +287,14 @@ header button:hover {
 
 .persons {
     margin: 40px 181px 0 181px;
-    padding-bottom: 35px;
+    padding-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 .persons div {
     width: 320px;
+    padding-bottom: 15px;
 }
 .persons div:nth-child(3n-1) {
     margin-left: 39px;
@@ -304,7 +321,7 @@ header button:hover {
     color: #533738;
 }
 .steps ol {
-    margin: 0 auto 0 auto;
+    margin: 20px auto 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -312,13 +329,16 @@ header button:hover {
     counter-reset: num;
 }
 .steps ol li {
-    padding-top: 130px;
+    padding-top: 110px;
     font-weight: 400;
     font-size: 18px;
     line-height: 30px;
     text-align: left;
     color: #533738;
     width: 285px;
+}
+.steps ol li:hover {
+    background-color: rgb(239, 230, 228, 0.5); /* #EFE6E4; */
 }
 .steps ol li:not(:nth-child(4n)) {
     margin-right: 20px;
@@ -333,6 +353,10 @@ header button:hover {
     margin-top: -90px;
     margin-left: 107px;
 }
+.steps ol li:hover::before {
+    border-color: rgb(83, 55, 56, 0.8); /* #533738; */
+}
+
 .steps ol li p {
     text-align: center;
 }
@@ -375,6 +399,16 @@ header button:hover {
 .comment div:first-child {
     padding-left: 29px;
     transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+.comment button {
+    width: 72px;
+    height: 72px;
+    border-width: 0;
+    outline-width: 0;
+    background: url("../img/feedback-arrow.png") center center no-repeat;
+}
+.comment button:hover {
+    background: url("../img/feedback-arrow-hover.png") center center no-repeat;
 }
 .comment div:last-child {
     padding-left: 29px;
@@ -500,4 +534,7 @@ footer a {
     line-height: 30px;
     color: #533738;
     text-decoration: none;
+}
+footer a:hover {
+    color: #CC8B86;
 }

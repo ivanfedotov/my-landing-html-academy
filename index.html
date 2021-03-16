@@ -15,7 +15,6 @@
                   <a href="/">SCANDI</a>
               </div>
               <ul>
-                  <!-- TO DO: добавить hover для ссылок -->
                   <li><a href="#about">О компании</a></li>
                   <li><a href="#porfolio">Портфолио</a></li>
                   <li><a href="#team">Команда</a></li>
@@ -31,25 +30,21 @@
             <p>Подбираем текстиль, мебель и аксессуары<br>
                 под ваш интерьер, находим магазины<br>
                 и помогаем организовать доставку</p>
-            <!-- TO DO: можно переделать на ссылку -->
+            <!-- TODO: оформить ссылкой -->
             <form action="#request" method="GET"><button>Оставить заявку</button></form>
         </header>
         <main>
-            <a name="about"></a>
-            <section class="about">
-                <article>
-                    <h2>О нас</h2>
-                    <div class="info">
-                        <img src="img/about-pic.png" alt="Премиальный европейский текстиль">
-                        <div>
-                            <p>Премиальный европейский текстиль — одно из самых главных направлений работы коллектива. Создавать неповторимые интерьеры для наших дорогих клиентов, уделяя внимание мельчайшим деталям — вот то,  что по-настоящему вдохновляет дизайнеров нашей студии.</p>
-                            <p>Наш коллектив сделает все, чтобы после сотрудничества с нами,  Вам было приятно сказать:
-                                <br>« Да! Это именно то, что действительно достойно моего дома!»</p>
-                        </div>
+            <section class="about" id="about">
+                <h2>О нас</h2>
+                <div class="info">
+                    <img src="img/about-pic.png" alt="Премиальный европейский текстиль">
+                    <div>
+                        <p>Премиальный европейский текстиль — одно из самых главных направлений работы коллектива. Создавать неповторимые интерьеры для наших дорогих клиентов, уделяя внимание мельчайшим деталям — вот то,  что по-настоящему вдохновляет дизайнеров нашей студии.</p>
+                        <p>Наш коллектив сделает все, чтобы после сотрудничества с нами,  Вам было приятно сказать:
+                            <br>« Да! Это именно то, что действительно достойно моего дома!»</p>
                     </div>
-                </article>
+                </div>
                 <div class="stats">
-                    <!-- TO DO: сделать hover-эффект? -->
                     <div>
                         <span>5</span><span>лет опыта</span>
                     </div>
@@ -61,8 +56,7 @@
                     </div>
                 </div>
             </section>
-            <a name="porfolio"></a>
-            <section class="porfolio">
+            <section class="porfolio" id="porfolio">
                 <h2>Наши работы</h2>
                 <div class="gallery">
                     <div class="gallery-card">
@@ -100,16 +94,13 @@
                     </div>
                 </div>
                 <div class="more">
-                    <!-- TO DO: добавить данных и сделать ссылку рабочей -->
-                    <a href="#">Смотреть еще</a>
-                    <a href="#"><img src="img/portfolio-arrow.png" alt="Смотреть еще"></a>
+                    <!-- TODO: оформить ссылкой -->
+                    <form action="#porfolio" method="GET"><button>Смотреть еще</button></form>
                 </div>
             </section>
-            <a name="team"></a>
-            <section class="team">
+            <section class="team" id="team">
                 <h2>Команда</h2>
                 <div class="persons">
-                    <!-- TO DO: исправить прижимание  вправо для последних карточек с номерами 2, 5, 8...   -->
                     <div>
                         <img src="img/team-person-1.png" alt="Маша">
                         <p>Это Маша, наш главный дизайнер. Она отвечает за дизайн-проект,
@@ -127,11 +118,9 @@
                     </div>
                 </div>
             </section>
-            <a name="working"></a>
-            <section class="working">
+            <section class="working" id="working">
                 <h2>Как мы работаем</h2>
                 <div class="steps">
-                    <!-- TO DO: сделать hover-эффект у кружочков -->
                     <ol>
                         <li><p>Знакомимся, выезжаем на объект, утверждаем концепцию, подписывем договор.</p></li>
                         <li><p>Подбираем мебель, текстиль, аксессуры. Делаем 3D-зуализацию.</p></li>
@@ -140,12 +129,12 @@
                     </ol>
                 </div>
             </section>
-            <a name="feedback"></a>
-            <section class="feedback">
+            <section class="feedback" id="feedback">
                 <h2>Отзывы</h2>
                 <div class="comment">
-                    <!-- TO DO: сделать красивый отыгрыш для hover-эффекта у стрелки -->
-                    <div><a href="#feedback"><img src="img/feedback-arrow.png" alt="Предыдущий слайд"></a></div>
+                    <div>
+                        <form action="#feedback" method="GET"><button></button></form>
+                    </div>
                     <blockquote class="comment-text">
                         <p>«Восторг! Спасибо, за комфортную жизнь. Очень рада, что выбрала вашу студию для украшения своего дома.</p>
                         <p>Работа шла быстро, было очень приятно общаться и взаимодествовайть с сотрудниками. Не ожидала, что это будет так легко!</p>
@@ -156,11 +145,12 @@
                         <img src="img/feedback-img-1.png" alt="Фото дома (гостиная)">
                         <img src="img/feedback-img-2.png" alt="Фото дома (кухня)">
                     </div>
-                  <div><a href="#feedback"><img src="img/feedback-arrow.png" alt="Следующий слайд"></a></div>
+                  <div>
+                      <form action="#feedback" method="GET"><button></button></form>
+                  </div>
                 </div>
             </section>
-            <a name="request"></a>
-            <section class="request">
+            <section class="request" id="request">
                 <div>
                     <h2>Оставить заявку</h2>
                     <p>Оставьте свои контакты. Менеджер перезвонит в удобное вам время и ответит на все вопросы.</p>
@@ -183,6 +173,6 @@
             <p>г. Санкт-петербург, ул. Большая Конюшенная, 19</p>
             <p>ИП Королёва А.А.</p>
         </footer>
-        <!-- TO DO: добавить плавающую кнопку для быстрого перехода вверх -->
+        <!-- TODO: добавить плавающую кнопку для быстрого перехода вверх -->
     </body>
 </html>
