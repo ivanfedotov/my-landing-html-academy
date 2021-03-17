@@ -4,14 +4,16 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: local("Montserrat"), url("../fonts/Montserrat/Montserrat-Regular.ttf") format("ttf");
+    src: url("../fonts/Montserrat/webfonts/Montserrat-Regular.woff2") format("woff2"),
+         url("../fonts/Montserrat/webfonts/Montserrat-Regular.woff") format("woff");
 }
 @font-face {
     font-family: "Montserrat";
     font-style: normal;
     font-weight: 500;
     font-display: swap;
-    src: local("Montserrat"), url("../fonts/Montserrat/Montserrat-Medium.ttf") format("ttf");
+    src: url("../fonts/Montserrat/webfonts/Montserrat-Medium.woff2") format("woff2"),
+         url("../fonts/Montserrat/webfonts/Montserrat-Medium.woff") format("woff");
 }
 body {
     margin: 0 auto;
@@ -24,9 +26,9 @@ body {
     color: #533738;
     overflow-x: scroll;
 }
-nav, div, p, h2, ul, ol, li, blockquote, cite, iframe {
-  margin: 0;
-  padding: 0;
+nav, div, span, p, h2, ul, ol, li, blockquote, cite, iframe {
+    margin: 0;
+    padding: 0;
 }
 
 /* БЛОК 0 - "МЕНЮ" */
@@ -51,9 +53,10 @@ nav {
     align-items: center;
 }
 .menu .logo {
-    width: 25.34px;
+    padding: 4.5px 0 4.5px 25.34px;
     height: 25px;
-    background: url("../img/header-logo.png");
+    background: url("../img/header-logo-200.png") left center no-repeat;
+    background-size: 25.34px 25px;
 }
 .menu ul {
     list-style-type: none;
@@ -74,7 +77,7 @@ nav {
     color: #533738;
     height: 20px;
 }
-.menu ul a:hover {
+.menu a:hover {
     color: #CC8B86;
 }
 
@@ -104,18 +107,23 @@ header p {
     font-size: 18px;
     line-height: 30px;
 }
-header button {
+header a {
+    display: block;
     margin: 21px auto 21px 0;
-    background-color: #CC8B86;
-    border-width: 0px;
-    outline-width: 0px;
-    width: 309.14px;
-    height: 74px;
+    padding-top: 25px;
+    width: 308.14px;
+    height: 49px;
+    text-decoration: none;
+    text-align: center;
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
+    color: #533738;
+    background-color: #CC8B86;
+    border: 1px solid #CC8B86;
+    outline-width: 0px;
 }
-header button:hover {
+header a:hover {
     background-color: #BC7B76;
     border: 1px solid #533738;
 }
@@ -507,7 +515,7 @@ blockquote.comment-text cite {
     display: block;
 }
 
-/* БЛОК 9 - "Подвал" */
+/* БЛОК 9 - "ПОДВАЛ" */
 footer {
     background-color: #EFE6E4;
     padding: 37px 100px 37px 100px;
@@ -521,10 +529,10 @@ footer p {
     line-height: 30px;
     color: #533738;
 }
-footer p:nth-child(1) {
+footer span {
     margin-right: 42px;
 }
-footer p:nth-child(2) {
+footer p:first-of-type {
     margin-right: auto;
 }
 footer a {

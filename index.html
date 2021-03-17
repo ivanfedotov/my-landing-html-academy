@@ -11,8 +11,7 @@
       <nav>
           <div class="menu">
               <div class="brand">
-                  <a href="/" class="logo"></a>
-                  <a href="/">SCANDI</a>
+                  <a href="#" class="logo">SCANDI</a>
               </div>
               <ul>
                   <li><a href="#about">О компании</a></li>
@@ -30,8 +29,7 @@
             <p>Подбираем текстиль, мебель и аксессуары<br>
                 под ваш интерьер, находим магазины<br>
                 и помогаем организовать доставку</p>
-            <!-- TODO: оформить ссылкой -->
-            <form action="#request" method="GET"><button>Оставить заявку</button></form>
+            <a href="#request">Оставить заявку</a>
         </header>
         <main>
             <section class="about" id="about">
@@ -154,7 +152,7 @@
                 <div>
                     <h2>Оставить заявку</h2>
                     <p>Оставьте свои контакты. Менеджер перезвонит в удобное вам время и ответит на все вопросы.</p>
-                    <form class="request-form" action="#" method="GET">
+                    <form class="request-form" action="#" method="POST">
                         <input type="text" name="user_name" placeholder="Ваше имя" value="" pattern=".{2,}" required>
                         <input type="tel" name="user_phone" placeholder="Введите телефон" value="" pattern="[0-9]{5,15}" required>
                         <input type="submit" value="Оставить заявку">
@@ -169,7 +167,7 @@
             </section>
         </main>
         <footer>
-            <p><a href="tel:+79818574624">+7 (981) 857-46-24</a></p>
+            <span><a href="tel:+79818574624">+7 (981) 857-46-24</a></span>
             <p>г. Санкт-петербург, ул. Большая Конюшенная, 19</p>
             <p>ИП Королёва А.А.</p>
         </footer>
