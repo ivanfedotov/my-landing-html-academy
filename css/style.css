@@ -30,6 +30,20 @@ nav, div, span, p, h2, ul, ol, li, blockquote, cite, iframe {
     margin: 0;
     padding: 0;
 }
+.atop {
+    transform: matrix(0, -1, 1, 0, 0, 0);
+    display:block;
+    position:fixed;
+    bottom: 40px;
+    right: 50px;
+    width: 72px;
+    height: 72px;
+    background: url("../img/feedback-arrow.png") no-repeat;
+    background-size: contain;
+}
+.atop:hover {
+  background: url("../img/feedback-arrow-hover.png") no-repeat;
+}
 
 /* БЛОК 0 - "МЕНЮ" */
 nav {
@@ -299,11 +313,12 @@ header a:hover {
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.persons div {
+.persons li {
     width: 320px;
     padding-bottom: 15px;
+    list-style-type: none;
 }
-.persons div:nth-child(3n-1) {
+.persons li:nth-child(3n-1) {
     margin-left: 39px;
     margin-right: auto;
 }
