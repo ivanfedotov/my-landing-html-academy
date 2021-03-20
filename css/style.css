@@ -183,18 +183,19 @@ header a:hover {
     background: #8D7370;
     color: #FFFFFF;
 }
-.stats div {
+.stats li {
     min-height: inherit;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
+    list-style-type: none;
 }
-.stats div:hover {
+.stats li:hover {
     background-color: #EFE6E4;
     color: #533738;
 }
-.stats div span:first-child {
+.stats li span:first-child {
     flex-wrap: wrap;
     text-align: center;
     margin-top: 85px;
@@ -202,7 +203,7 @@ header a:hover {
     font-size: 50px;
     line-height: 62px;
 }
-.stats div span:last-child {
+.stats li span:last-child {
     flex-wrap: wrap;
     text-align: center;
     margin-top: 8px;
