@@ -179,16 +179,16 @@ header a:hover {
 .stats {
     display: flex;
     justify-content: space-around;
-    width: 100%;
     min-height: 273px;
     background: #8D7370;
     color: #FFFFFF;
 }
 .stats div {
+    min-height: inherit;
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 40px;
 }
 .stats div:hover {
     background-color: #EFE6E4;
@@ -351,6 +351,7 @@ header a:hover {
     counter-reset: num;
 }
 .steps ol li {
+    position: relative;
     padding-top: 110px;
     font-weight: 400;
     font-size: 18px;
@@ -360,7 +361,7 @@ header a:hover {
     width: 285px;
 }
 .steps ol li:hover {
-    background-color: rgb(239, 230, 228, 0.5); /* #EFE6E4; */
+    background-color: rgba(239, 230, 228, 0.5); /*  #EFE6E4; */
 }
 .steps ol li:not(:nth-child(4n)) {
     margin-right: 20px;
@@ -376,7 +377,7 @@ header a:hover {
     margin-left: 107px;
 }
 .steps ol li:hover::before {
-    border-color: rgb(83, 55, 56, 0.8); /* #533738; */
+    border-color: rgba(83, 55, 56, 0.8); /* #533738; */
 }
 
 .steps ol li p {
@@ -435,21 +436,18 @@ header a:hover {
 .comment div:last-child {
     padding-left: 29px;
 }
-blockquote.comment-text p {
+.comment-text p {
     padding: 0 20px 30px 0;
     font-size: 18px;
     line-height: 30px;
     color: #533738;
 }
-blockquote.comment-text cite {
+.comment-text cite {
     text-transform: uppercase;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 30px;
-}
-.comment-img {
-      width: 407px;
 }
 .comment-img img:not(:last-child) {
     margin-bottom: 24px;
