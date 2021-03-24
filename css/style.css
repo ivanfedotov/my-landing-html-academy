@@ -21,7 +21,7 @@ body {
     background: #E5E5E5;
     min-width: 1400px;
     width: 1400px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', Arial, sans-serif;
     font-style: normal;
     color: #533738;
     overflow-x: scroll;
@@ -29,6 +29,36 @@ body {
 nav, div, span, p, h2, ul, ol, li, blockquote, cite, iframe {
     margin: 0;
     padding: 0;
+}
+a {
+    text-decoration: none;
+    color: #533738;
+}
+a:hover {
+    color: #CC8B86;
+}
+a:focus {
+    color: #99544f;
+    outline: 2px dotted #99544f;
+}
+button:focus {
+    outline: 2px dotted #99544f;
+}
+input:focus {
+    outline: 2px dotted #ffffff;
+}
+/* Сокрытие элемента - готовый рецепт из образцовой верстки HTML Academy */
+.visually-hidden:not(:focus):not(:active) {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    border: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
 }
 .atop {
     transform: matrix(0, -1, 1, 0, 0, 0);
@@ -46,7 +76,7 @@ nav, div, span, p, h2, ul, ol, li, blockquote, cite, iframe {
 }
 
 /* БЛОК 0 - "МЕНЮ" */
-nav {
+.menu-container {
     position: absolute;
     top: 36px;
     left: 0;
@@ -62,19 +92,25 @@ nav {
     justify-content: space-between;
     align-items: center;
 }
-.menu .brand {
-    display: flex;
-    align-items: center;
+.brand {
+    height: inherit;
 }
-.menu .logo {
-    padding: 4.5px 0 4.5px 25.34px;
-    height: 25px;
-    background: url("../img/header-logo-200.png") left center no-repeat;
-    background-size: 25.34px 25px;
+.menu .brand a {
+    display: block;
+    height: inherit;
+}
+.menu .brand a span {
+    display: block;
+    float: right;
+    margin-top: 3px;
+}
+nav {
+    margin-left: auto;
 }
 .menu ul {
     list-style-type: none;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     height: 20px;
@@ -87,12 +123,10 @@ nav {
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
-    text-decoration: none;
-    color: #533738;
     height: 20px;
 }
-.menu a:hover {
-    color: #CC8B86;
+.menu .phone {
+    margin-left: 26px;
 }
 
 /* БЛОК 1 - "ШАПКА" */
@@ -102,12 +136,12 @@ header {
     align-items: flex-start;
     padding-left: 184.08px;
     background:
-        url("../img/header-background-100.png") 50% 50% no-repeat,
-        url("../img/header-background-10.png") 50% 50% no-repeat;
+        url("../img/header-background-100.jpg") 50% 50% no-repeat,
+        url("../img/header-background-10.jpg") 50% 50% no-repeat;
     background-size: cover, cover;
     min-height: 715px;
 }
-header h2 {
+header h1 {
     margin: 152px auto 0 0;
     width: 534.02px;
     font-weight: 400;
@@ -121,7 +155,7 @@ header p {
     font-size: 18px;
     line-height: 30px;
 }
-header a {
+header a.btn {
     display: block;
     margin: 21px auto 21px 0;
     padding-top: 25px;
@@ -135,7 +169,6 @@ header a {
     color: #533738;
     background-color: #CC8B86;
     border: 1px solid #CC8B86;
-    outline-width: 0px;
 }
 header a:hover {
     background-color: #BC7B76;
@@ -147,7 +180,7 @@ header a:hover {
     background-color: #EFE6E4;
     padding-top: 65px;
     min-width: 1036px;
-    min-height: 849px;
+    min-height: 573px;
 }
 .about h2 {
     margin: 0 auto;
@@ -164,11 +197,7 @@ header a:hover {
     justify-content: space-between;
     align-items: flex-start;
 }
-.about img {
-    width: 444.54px;
-    height: 465px;
-}
-.about p {
+.about .info p {
     padding: 0 0 18px 63.46px;
     width: 528px;
     font-weight: 400;
@@ -176,42 +205,53 @@ header a:hover {
     line-height: 30px;
 }
 
-.stats {
+/* БЛОК 2+ - "Достижения" */
+.achivements {
+    background-color: #EFE6E4;
+    min-width: 1400px;
+    min-height: 273px;
+}
+.achivements h2 {
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 50px;
+    text-transform: uppercase;
+    text-align: center;
+}
+ul.stats {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     min-height: 273px;
-    background: #8D7370;
+    background-color: #8D7370;
     color: #FFFFFF;
+    list-style-type: none;
 }
 .stats li {
     min-height: inherit;
     flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    list-style-type: none;
 }
 .stats li:hover {
     background-color: #EFE6E4;
     color: #533738;
 }
-.stats li span:first-child {
-    flex-wrap: wrap;
+.stats li p {
     text-align: center;
-    margin-top: 85px;
-    font-weight: 500;
-    font-size: 50px;
-    line-height: 62px;
-}
-.stats li span:last-child {
-    flex-wrap: wrap;
-    text-align: center;
-    margin-top: 8px;
+    margin: 85px 15px 15px auto;
     font-weight: 500;
     font-size: 30px;
     line-height: 37px;
-    font-weight: 500;
     text-transform: uppercase;
+}
+.stats li span {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 62px;
 }
 
 /* БЛОК 3 - "Портфолио" / "Наши работы" */
@@ -240,6 +280,9 @@ header a:hover {
     height: 451px;
     margin-bottom: 30px;
 }
+.gallery-card:hover div {
+    visibility: visible;
+}
 .gallery-card div {
     background-color: rgba(100, 72, 69, 0.8);
     position: absolute;
@@ -247,11 +290,7 @@ header a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    /* TODO: использовать свойство visibility чтобы текст не выделялся при Ctrl + A */
-    opacity: 0;
-}
-.gallery-card div:hover {
-    opacity: 1;
+    visibility: hidden;
 }
 .gallery-card div h3 {
     margin: 86px 22.34% 0  22.34%;
@@ -279,7 +318,6 @@ header a:hover {
     width: 294px;
     text-align: left;
     border-width: 0;
-    outline-width: 0px;
     background: url("../img/portfolio-arrow.png") center right no-repeat;
     font-weight: 500;
     font-size: 30px;
@@ -428,7 +466,6 @@ header a:hover {
     width: 72px;
     height: 72px;
     border-width: 0;
-    outline-width: 0;
     background: url("../img/feedback-arrow.png") center center no-repeat;
 }
 .comment button:hover {
@@ -484,6 +521,14 @@ header a:hover {
     min-height: 624px;
     background: url("../img/request-map-(prototype).png") no-repeat;
 }
+.request label {
+    display: block;
+    margin-top: 50px;
+    margin-bottom: -20px;
+    padding-left: 10px;
+    color: #ffffff;
+    border-left: 10px solid #ffffff;
+}
 .request [type="text"],
 .request [type="tel"] {
     background: #8D7370;
@@ -496,7 +541,6 @@ header a:hover {
     color: #F6EDE9;
     border-width: 0;
     border-bottom: 1px solid #F6EDE9;
-    outline-width: 0px;
 }
 .request [type="text"]:invalid,
 .request [type="tel"]:invalid {
@@ -513,7 +557,6 @@ header a:hover {
     margin: 31px auto 21px 0;
     background-color: #CC8B86;
     border-width: 0px;
-    outline-width: 0px;
     width: 309.14px;
     height: 74px;
     font-weight: 500;
@@ -543,19 +586,13 @@ footer p {
     line-height: 30px;
     color: #533738;
 }
-footer span {
-    margin-right: 42px;
-}
 footer p:first-of-type {
     margin-right: auto;
 }
 footer a {
+    display: block;
+    margin-right: 42px;
     font-weight: 400;
     font-size: 18px;
     line-height: 30px;
-    color: #533738;
-    text-decoration: none;
-}
-footer a:hover {
-    color: #CC8B86;
 }
