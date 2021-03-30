@@ -519,7 +519,7 @@ ul.stats {
 .request div:last-child {
     min-width: 590px;
     min-height: 624px;
-    background: url("../img/request-map-(prototype).png") no-repeat;
+    background: url("../img/request-map-(prototype).jpg") no-repeat;
 }
 .request label {
     display: block;
