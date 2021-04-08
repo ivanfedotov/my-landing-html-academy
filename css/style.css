@@ -26,7 +26,7 @@ body {
     color: #533738;
     overflow-x: scroll;
 }
-nav, div, span, p, h2, ul, ol, li, blockquote, cite, iframe {
+nav, div, span, p, h2, ul, ol, li, blockquote, cite, iframe, button {
     margin: 0;
     padding: 0;
 }
@@ -68,11 +68,11 @@ input:focus {
     right: 50px;
     width: 72px;
     height: 72px;
-    background: url("../img/feedback-arrow.png") no-repeat;
-    background-size: contain;
+    border-radius: 50%;
+    background-color: #CC8B86;
 }
 .atop:hover {
-  background: url("../img/feedback-arrow-hover.png") no-repeat;
+    background-color: #8D7370;
 }
 
 /* БЛОК 0 - "МЕНЮ" */
@@ -318,16 +318,18 @@ ul.stats {
     width: 294px;
     text-align: left;
     border-width: 0;
-    background: url("../img/portfolio-arrow.png") center right no-repeat;
     font-weight: 500;
     font-size: 30px;
     line-height: 37px;
     color: #533738;
+    background-color: transparent;
+    cursor: pointer;
 }
 .porfolio .more button:hover {
-    border-width: 0;
     color: #CC8B86;
-    background: url("../img/portfolio-arrow-hover.png") center right no-repeat;
+}
+.porfolio .more button:hover #portfolio-arrow-path {
+    fill: #CC8B86;
 }
 
 /* БЛОК 4 "Команда" - "КОМАНДА" */
@@ -466,10 +468,12 @@ ul.stats {
     width: 72px;
     height: 72px;
     border-width: 0;
-    background: url("../img/feedback-arrow.png") center center no-repeat;
+    background-color: #CC8B86;
+    border-radius: 50%;
+    cursor: pointer;
 }
 .comment button:hover {
-    background: url("../img/feedback-arrow-hover.png") center center no-repeat;
+    background-color: #8D7370;
 }
 .comment div:last-child {
     padding-left: 29px;
@@ -563,6 +567,7 @@ ul.stats {
     font-size: 20px;
     line-height: 24px;
     color: #533738;
+    cursor: pointer;
 }
 .request [type="submit"]:hover {
     background-color: #BC7B76;
